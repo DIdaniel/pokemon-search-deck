@@ -1,38 +1,71 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.TitleSection {
+  background-color: #5db9ff;
+  width: 100%;
+  height: 18rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.TitleSection input {
+  width: 14rem;
+  height: 2.5rem;
+  font-size: 1.1rem;
+  padding-left: 1.1rem;
+  border-radius: 10px;
+  border: 2px solid #4ca8ee;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.TitleSection button {
+  width: 11rem;
+  height: 3.5rem;
+  margin: 20px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: 2px solid #4ca8ee;
+  color: #fff;
+  background-color: #006cbf;
+  border-bottom: 3px solid #01589b;
+  outline: none;
+}
+
+.TitleSection button:hover {
+  cursor: pointer;
+}
+
+@keyframes clickEffect {
   to {
-    transform: rotate(360deg);
+    transform: translateY(2px);
+    border-bottom: none;
   }
+}
+
+.TitleSection button:active {
+  animation: clickEffect 0.2s linear;
+}
+
+.DisplaySection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.DisplaySection h4,
+h3 {
+  margin: 5px;
+}
+
+.DisplaySection img {
+  width: 200px;
 }
